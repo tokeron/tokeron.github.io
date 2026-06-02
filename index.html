@@ -19,6 +19,13 @@
 
       gtag('config', 'G-7X1S6BHYCR');
     </script>
+
+    <script>
+      function toggleBibtex(id) {
+        var el = document.getElementById(id);
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+      }
+    </script>
   </head>
 
   <body>
@@ -102,7 +109,17 @@
         <br>
         <em>ICLR</em>, 2026
         <br>
+        <a href="https://iclr.cc/virtual/2026/poster/10009402">Poster</a>
+        /
         <a href="https://arxiv.org/abs/2510.15015">arXiv</a>
+        /
+        <a href="#" onclick="toggleBibtex('bib-deleaker'); return false;">BibTeX</a>
+        <pre id="bib-deleaker" class="bibtex">@inproceedings{ventura2025deleaker,
+  title={Deleaker: Dynamic inference-time reweighting for semantic leakage mitigation in text-to-image models},
+  author={Ventura, Mor and Toker, Michael and Patashnik, Or and Belinkov, Yonatan and Reichart, Roi},
+  booktitle={The Fourteenth International Conference on Learning Representations},
+  year={2026}
+}</pre>
         <p></p>
         <p>
           Text-to-Image (T2I) models remain vulnerable to semantic leakage, where features from one entity unintendedly transfer to another. We introduce DeLeaker, an optimization-free inference-time approach that mitigates this by dynamically reweighting attention maps to suppress excessive cross-entity interactions, achieving effective mitigation without compromising fidelity.
